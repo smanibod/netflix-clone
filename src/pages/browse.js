@@ -1,5 +1,18 @@
 import React, { Fragment } from 'react';
+import { BrowseContainer } from '../containers/browse';
+import { useContent } from '../hooks/use-content'
+
+import selectionMap  from '../utils'
 
 export default function Browse(){
-    return <Fragment></Fragment>
+
+    const { series } = useContent('series');
+    const { films } = useContent('films');
+    const slides = selectionMap( {series, films});
+
+    return (
+    <Fragment>
+        <BrowseContainer slides={slides}></BrowseContainer>
+    </Fragment>
+    );
 }
