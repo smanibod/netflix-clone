@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { BrowseContainer } from '../containers/browse';
-import { useContent } from '../hooks/use-content'
+import { useContent } from '../hooks'
 
-import selectionMap  from '../utils'
+import { selectionMap }  from '../utils'
 
 export default function Browse(){
 
